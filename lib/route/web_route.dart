@@ -1,5 +1,5 @@
+import '../configs/setting.dart';
 import '../example.dart';
-
 import '../controllers/api_document.dart';
 import 'package:webapp/wa_route.dart';
 import '../controllers/auth_controller.dart';
@@ -189,10 +189,7 @@ Future<List<WebRoute>> getWebRoute(WebRequest rq) async {
         ...paths,
         WebRoute(
           path: 'fa/*',
-          extraPath: [
-            'en/*',
-            'nl/*',
-          ],
+          extraPath: Setting.languages.keys.map((e) => '$e/*').toList(),
           rq: rq,
           index: homeController.changeLanguage,
         )

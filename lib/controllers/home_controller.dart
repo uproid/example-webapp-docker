@@ -1,5 +1,7 @@
 import 'dart:io';
 import 'dart:math';
+import '../configs/setting.dart';
+
 import '../db/example_collections.dart';
 import '../models/example_model.dart';
 import 'package:webapp/wa_mail.dart';
@@ -328,6 +330,8 @@ class HomeController extends WaController {
       user = MockUserModel();
       ;
     }
+
+    rq.addParam('languages', Setting.languages);
 
     rq.addParams({
       'title': 'logo.title',
