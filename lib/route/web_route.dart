@@ -1,5 +1,5 @@
 import '../configs/setting.dart';
-import '../example.dart';
+import '../app.dart';
 import '../controllers/api_document.dart';
 import 'package:webapp/wa_route.dart';
 import '../controllers/auth_controller.dart';

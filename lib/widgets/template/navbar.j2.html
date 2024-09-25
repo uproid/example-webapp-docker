@@ -54,11 +54,11 @@
             >
               <?= $e.ln | upper ?>
             </button>
-            <ul class="dropdown-menu" style="max-height: 300px; overflow-y: auto">
+            <ul class="dropdown-menu"  dir="ltr" style="max-height: 300px; overflow-y: auto">
               <? for key, language in languages ?>
               <li>
                 <a class="dropdown-item <?= 'active' if $e.ln == key ?>" href="<?= $e.urlToLanguage(key) ?>" style="display: flex; align-items: center;">
-                  <b style="font-size: 22px; margin-right: 8px;"><?= language.flag ?></b>
+                  <b class="me-2"><?= language.flag ?></b>
                   <span><?= language.name ?></span>
                 </a>
               </li>
