@@ -9,9 +9,16 @@ ENV LOCAL_DEBUG=true
 ENV ENABLE_DATABASE=true
 
 COPY . .
-RUN chmod -R a+rxw .
+
+# Create .env file
+RUN echo "MYSQL_HOST=mysql" > .env && \
+    echo "MONGO_CONNECTION=mongodb" >> .env && \
+    echo "MONGO_PORT=27017" >> .env
+
+#RUN chmod -R a+rxw .
 RUN dart pub get 
 RUN dart pub get --offline 
+
 
 EXPOSE 8085 8181
 
