@@ -15,4 +15,4 @@ RUN dart pub get --offline
 
 EXPOSE 8085 8181
 
-CMD [ "dart","run","--enable-asserts", "--observe=8181", "--enable-vm-service", "--disable-service-auth-codes","/www/lib/watcher.dart" ]
+CMD [ "dart","run","--enable-asserts", "--observe=8181", "--enable-vm-service", "--disable-service-auth-codes","/www/lib/watcher.dart", "migrate", "--init" ]
